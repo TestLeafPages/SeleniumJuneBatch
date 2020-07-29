@@ -1,0 +1,53 @@
+Its a hybrid /customised/ integrated framework, which is designed based on Page Object Model. It uses selenium webdriver to interact with Web application. Testng is used for Test execution. We have used Apache POI to read data from excel to acheive data driven for our tests. Cucumber is itegrated for BDD approach. Extent report is used to generate html report for our test execution.
+
+Components in Our Framework:
+ - 2 Interfaces to design the method for Browser and Element
+
+ - SeleniumBase super class implements both Browser and Element interfaces
+
+    - To have exception handling and updating the status for each step
+    - Reusability of methods
+    - easy maintenance
+
+- utils - to interact with external applications (Excel and Extent report)
+
+- ProjectSpecificMethods - Base class for Pages and Test cases
+
+- pages 
+
+   - Java classes for each page in application
+
+- testcases
+  
+   - Java classes for each test scenario
+
+Flow of extends:
+
+Reporter extends AbstractTestNGCucumberTests
+SeleniumBase extends Reporter
+ProjectSpecificMethods extends SeleniumBase
+pages and testcase extends ProjectSpecificMethods 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
